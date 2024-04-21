@@ -1,0 +1,37 @@
+$clrs:(
+    dark:(
+        100:hsl(270, 3%, 11%),
+        200:hsl(264, 5%, 20%)
+    ),
+    light:(
+        100: hsl(0, 0%, 100%),
+        200:hsl(210, 17%, 95%)
+    ),
+    call:(
+        100: hsl(11, 72%, 66%),
+        200: hsl(11, 100%, 80%)
+    )
+);
+
+@mixin tablet{
+    @media screen and (min-width:600px){
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen and (min-width:970px){
+        @content;
+    }
+}
+
+:root{
+    @each $clr, $vls in $clrs{
+        @each $subClr, $subVls in $vls{
+            --clr-#{$clr}-#{$subClr}:#{$subVls};
+        }
+    }
+    --sans: "Jost", sans-serif;
+}
+
+
+

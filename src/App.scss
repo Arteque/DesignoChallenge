@@ -1,0 +1,71 @@
+@import "./Vars";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: var(--sans);
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 26px;
+}
+.btn{
+    text-decoration:none;
+}
+.btn-call{
+    padding: 10px 1rem;
+    display: block;
+    width: fit-content;
+    text-transform:uppercase;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.radius{
+    border-radius: 8px;
+    @include tablet{
+        border-radius: 10px;
+    }
+}
+.light{
+    color: var(--clr-dark-100);
+    background: var(--clr-light-100);
+    &:hover{
+        background:var(--clr-call-200);
+        color: var(--clr-light-100);
+    }
+}
+.dark{
+    color: var(--clr-light-100);
+    background: var(--clr-call-100);
+    &:hover{
+        background:var(--clr-call-200);
+        color: var(--clr-light-100);
+    }
+}
+
+//Typography
+.heading{
+    &.big{
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 600;
+    }
+    &.medium{
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+    &.small{
+        font-size: 20px;
+        line-height:26px;
+        font-weight:600;
+        letter-spacing:5px;
+    }
+}
+
+
+.uppercase{
+    text-transform:uppercase; 
+}
