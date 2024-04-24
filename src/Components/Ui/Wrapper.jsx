@@ -1,7 +1,7 @@
-function Wrapper({children, ...props}) {
+function Wrapper({children, classes, ...props}) {
 
   return (
-    <div {...props} className="wrapper">
+    <div className={`wrapper ${classes}`} {...props} >
         {children}
     </div>
   )

@@ -33,5 +33,22 @@ $clrs:(
     --sans: "Jost", sans-serif;
 }
 
+//Classes 
+// Txt Color
+@each $clr, $vls in $clrs{
+    @each $subClr, $subVl in $vls{
+        .txt-#{$clr}-#{$subClr}{
+            color: var( --clr-#{$clr}-#{$subClr});
+        }
+    }
+}
+// Background Color:
+@each $clr, $vls in $clrs{
+    @each $subClr, $subVl in $vls{
+        .bg-#{$clr}-#{$subClr}{
+            background: var( --clr-#{$clr}-#{$subClr});
+        }
+    }
+}
 
 
