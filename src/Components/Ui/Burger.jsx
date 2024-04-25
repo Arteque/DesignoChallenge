@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types'
+import "../Styling/Burger.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+
 function Burger({status, handleClick, ...props}) {
-    return <button className={`burger ${status}`} onClick={(e) => {handleClick(e)}} {...props}>
+
+    return <button className={`burger ${status}`} onClick={handleClick} {...props}>
     {
         status == "open" ? (
             <FontAwesomeIcon icon={faBars} />
@@ -22,7 +25,10 @@ Burger.defaultProps = {
 
 
 Burger.propTypes = {
-    status: PropTypes.oneOf(['open', 'close']).isRequired
+    status: PropTypes.oneOf(['open', 'close']).isRequired,
+    handleClick: PropTypes.func
 }
+
+
 
 export default Burger
