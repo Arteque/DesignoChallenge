@@ -1,0 +1,11 @@
+nav{
+    background-color: var(--clr-dark-100);
+    padding-block:2rem;
+    a{
+        text-decoration:none;
+        color: var(--clr-light-100);
+        padding: 1rem;
+        display:block;
+        text-transform:uppercase;
+    }
+}

@@ -1,19 +1,28 @@
 import PropTypes from 'prop-types'
 import "../Styling/Burger.scss"
+import {motion} from 'framer-motion'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Burger({status, handleClick, ...props}) {
 
-    return <button className={`burger ${status}`} onClick={handleClick} {...props}>
+    return <motion.button 
+    whileTap={{ scale:0.9 }}
+    className={`burger ${status}`} 
+    onClick={handleClick} 
+    {...props}>
     {
         status == "open" ? (
-            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon 
+            
+            icon={faBars} />
         ) : (
-            <FontAwesomeIcon icon={faXmark} />
+            <FontAwesomeIcon 
+            icon={faXmark} />
         )
     }
-    </button>
+    </motion.button>
  
 }
 
