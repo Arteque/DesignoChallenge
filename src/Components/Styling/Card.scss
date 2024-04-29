@@ -3,17 +3,7 @@
     overflow: hidden;
     border-radius:15px;
     background-size: cover;
-    background-repeat: no-repeat;
-    &::before{
-        content:"";
-        background: var(--clr-dark-100);
-        opacity:0.8;
-        position:absolute;
-        inset: 0;
-        z-index: 0;
-    }
-    
-    &.webdesign{
+    background-repeat: no-repeat;  &.webdesign{
         background-image:url(/home/mobile/image-web-design.jpg);
     }
     &.appdesign{
@@ -48,5 +38,4 @@
             }
         }
     }
-    
 }

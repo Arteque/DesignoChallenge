@@ -2,10 +2,10 @@ import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-
+import "../Styling/FullCard.scss"
 function FullCard({bgImg, cardTitle, url, urlTitle, ...props}) {
   return (
-    <div className={`card-container ${bgImg}`} {...props}>
+    <div className={`card-container full-card ${bgImg}`} {...props}>
          <div className="content">
              <h2 className="txt-light-100">{cardTitle}</h2>
              <Link to={url}>

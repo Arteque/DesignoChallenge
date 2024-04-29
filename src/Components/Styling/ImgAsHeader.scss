@@ -1,0 +1,18 @@
+.img-as-header{
+    text-align:center;
+    .card-header{
+        max-width: 202px;
+        margin-inline:auto;
+        background-image:url(./home/desktop/bg-pattern-hero-home.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat:no-repeat;
+    }
+    .card-body{
+        h2{
+            font-weight: 400;
+            text-transform:uppercase;
+            margin-block: 2rem;
+        }
+    }
+}

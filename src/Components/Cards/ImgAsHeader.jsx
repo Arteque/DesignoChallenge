@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-
+import "../Styling/ImgAsHeader.scss"
 function ImgAsHeader({imgSrc, imgAlt, cardTitle, cardText, ...props}) {
   return (
     <div className={`card-container img-as-header`} {...props}>
