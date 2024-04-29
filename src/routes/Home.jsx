@@ -1,30 +1,10 @@
 import Wrapper from "../Components/Ui/Wrapper"
 import Buttons from '../Components/Ui/Buttons'
 import Card from "../Components/Card"
+import DataLoader from "../Components/DataLoader"
 function Home() {
 
-  const designCards = [
-    {
-      id:1,
-      title:"Web design",
-      url:"webdesign",
-      urlText:"View projects"
-    },
-    
-    {
-      id:2,
-      title:"App design",
-      url:"appdesign",
-      urlText:"View projects"
-    },
-    {
-      id:3,
-      title:"Graphic design",
-      url:"graphicdesign",
-      urlText:"View Projects"
-    },
-
-  ]
+  const designsUrl = "./JSONS/Designs.json"
 
   return (
     <>
@@ -44,16 +24,22 @@ function Home() {
           </div>
       </Wrapper>
     </section>
-    <section>
+    <section className="service-section">
         <Wrapper>
-            <div className="grid">
-                {
-                  designCards.map((item) => {
-                    return <Card variant="full" key={item.id} bgImg={item.url} cardTitle={item.title} url={item.url} urlTitle={item.urlText}/>
-                  })
-                }
+            <div className="grid"> 
+               
             </div>
         </Wrapper>
+    </section>
+
+    <section className="about-section">
+      <Wrapper>
+         <div className="grid">
+               <DataLoader url={designsUrl}>
+                  {(item) => <Card key={item.id} variant="full" cardTitle={item.title} url={item.url} urlTitle={item.urlText} bgImg={item.url}/>}
+               </DataLoader>
+         </div>       
+      </Wrapper>
     </section>
     </>
   )
