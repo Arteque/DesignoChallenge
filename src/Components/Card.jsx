@@ -1,46 +1,20 @@
 import  PropTypes from 'prop-types'
-import { Link } from "react-router-dom"
 import "./Styling/Card.scss"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
+import ImgAsHeader from './Cards/ImgAsHeader';
+import FullCard from './Cards/FullCard';
 
 
 function Card({variant, bgImg, cardTitle, cardText, url, urlTitle, imgSrc, imgAlt, ...props}) {
   return<> 
-  { variant == 'full' ? (
-    
-    <div className={`card-container ${bgImg}`} {...props}>
-         <div className="content">
-             <h2 className="txt-light-100">{cardTitle}</h2>
-             <Link to={url}>
-                 <span className="text">
-                     {urlTitle}
-                 </span>
-                 <span className="icon">
-                     <FontAwesomeIcon icon={faAngleRight} />
-                 </span>
-             </Link>
-         </div>
-     </div>
-   
-):(
-    <div className={`card-container img-as-header`} {...props}>
-         <div className="card-header">
-            <img src={imgSrc} alt={imgAlt} />
-         </div>
-         <div className="card-body">
-            <h2>
-                {cardTitle}
-            </h2>
-            <p>
-                {cardText}
-            </p>
-         </div>
-     </div>   
-)}
-
-  
+{ 
+  variant == 'full' ? (
+        <FullCard bgImg={bgImg} url={url} urlTitle={urlTitle} cardTitle={cardTitle}{...props}/>  
+    )
+     :(
+        <ImgAsHeader cardTitle={cardTitle} cardText={cardText} imgSrc={imgSrc} imgAlt={imgAlt} />
+  )
+}
   </>
 
 }
