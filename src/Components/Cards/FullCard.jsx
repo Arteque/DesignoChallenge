@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,5 +20,11 @@ function FullCard({bgImg, cardTitle, url, urlTitle, ...props}) {
      </div>
   )
 }
-
+FullCard.propTypes = {
+    bgImg: PropTypes.string,
+    cardTitle: PropTypes.string,
+    cardText: PropTypes.string,
+    url:PropTypes.string,
+    urlTitle:PropTypes.string,
+}
 export default FullCard

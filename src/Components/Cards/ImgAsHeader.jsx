@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types'
 
 function ImgAsHeader({imgSrc, imgAlt, cardTitle, cardText, ...props}) {
   return (
@@ -18,6 +16,14 @@ function ImgAsHeader({imgSrc, imgAlt, cardTitle, cardText, ...props}) {
          </div>
      </div> 
   )
+}
+
+ImgAsHeader.propTypes = {
+  bgImg: PropTypes.string,
+  cardTitle: PropTypes.string,
+  cardText: PropTypes.string,
+  imgSrc: PropTypes.string,
+  imgAlt: PropTypes.string
 }
 
 export default ImgAsHeader
