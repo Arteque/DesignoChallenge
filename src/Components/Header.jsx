@@ -3,6 +3,7 @@ import Wrapper from "./Ui/Wrapper"
 import { useState, useEffect } from "react"
 import Nav from "./Nav"
 import Burger from "./Ui/Burger"
+import './Styling/Header.scss'
 
 function Header() {
 
@@ -13,11 +14,14 @@ const handleClick = () => {
   
 }
 
+
+
 useEffect(()=>{
   document.body.classList.value = burgerStatus
 }, [burgerStatus])
+
   return (
-    <header>
+    <header id="main-header">
         <Wrapper>
           <Logo location="header" />
           <Burger handleClick={handleClick} status={burgerStatus}/>

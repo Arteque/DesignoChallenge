@@ -1,6 +1,10 @@
 nav{
     background-color: var(--clr-dark-100);
     padding-block:2rem;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     a{
         text-decoration:none;
         color: var(--clr-light-100);

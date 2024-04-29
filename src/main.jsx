@@ -28,6 +28,9 @@ const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/locations' element={<Locations />} />
+      <Route path="/webdesign" element={<WebDesign />} />
+      <Route path="/graphicdesign" element={<GraphicDesign />} />
+      <Route path="/appdesign" element={<AppDesign />} />
       <Route errorElement={<NotFound />}/>
     </Route>
   )

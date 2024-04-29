@@ -6,7 +6,7 @@ import "./Styling/Nav.scss"
 
 function Nav({burgerStatus}) {
 
-const drt = 0.5
+const drt = 0.2
 
     const navData = [
         {
@@ -43,8 +43,8 @@ const drt = 0.5
                         {
                             navData.map((item, index) => (
                                 <motion.li key={item.id}
-                                    initial={{x:50,opacity:0}}
-                                    animate={{x:0,opacity:1}}
+                                    initial={{y:50,opacity:0}}
+                                    animate={{y:0,opacity:1}}
                                     transition={{ delay: drt + (index * 0.2) }}
                                 >
                                     <Link to={item.url}>{item.name}</Link>        

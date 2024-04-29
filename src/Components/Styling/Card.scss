@@ -1,0 +1,52 @@
+.card-container{
+    position:relative;
+    overflow: hidden;
+    border-radius:15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::before{
+        content:"";
+        background: var(--clr-dark-100);
+        opacity:0.8;
+        position:absolute;
+        inset: 0;
+        z-index: 0;
+    }
+    
+    &.webdesign{
+        background-image:url(/home/mobile/image-web-design.jpg);
+    }
+    &.appdesign{
+        background-image:url(/home/mobile/image-app-design.jpg)
+    }
+    &.graphicdesign{
+        background-image:url(/home/mobile/image-graphic-design.jpg)
+    }
+    .content{
+        min-height: 250px;
+        z-index: 100;
+        position: relative;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+        gap: 1rem;
+        text-transform: uppercase;
+        h2{
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1.4px;
+        }
+        a{
+            text-decoration:none;
+            color: var(--clr-light-100);
+            letter-spacing: 5px;
+            font-size: 15px;
+            .icon{
+                color: var(--clr-call-100);
+            }
+        }
+    }
+    
+}

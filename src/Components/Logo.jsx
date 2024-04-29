@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react"
+import PropTypes from 'prop-types'
+import { useEffect } from 'react'
 import { Link } from "react-router-dom"
+import './Styling/Logo.scss'
 function Logo({location}) {
-   
+
     useEffect(()=>{
     
         switch(location){
@@ -27,5 +29,7 @@ function Logo({location}) {
     }
 
 }
-
+Logo.propTypes = {
+    location: PropTypes.string
+}
 export default Logo
