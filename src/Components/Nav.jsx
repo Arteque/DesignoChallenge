@@ -4,7 +4,7 @@ import {MotionConfig, motion} from "framer-motion"
 import "./Styling/Nav.scss"
 
 
-function Nav({burgerStatus}) {
+function Nav({burgerStatus, navPosition}) {
 
 const drt = 0.2
 
@@ -57,10 +57,23 @@ const drt = 0.2
           
         }
 
+        if(navPosition == "footer"){
+           return <ul>
+                {
+                    navData.map((item,index) => (
+                        <li key={index}>
+                             <Link to={item.url}>{item.name}</Link>
+                        </li>       
+                    ))
+                }
+            </ul>
+        }
+
 }
 
 Nav.propTypes = {
-    burgerStatus: PropTypes.oneOf(['open', 'close']).isRequired,
+    burgerStatus: PropTypes.oneOf(['open', 'close']),
+    navPosition:PropTypes.oneOf(["header", "footer"])
 }
 
 export default Nav

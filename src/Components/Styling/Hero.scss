@@ -1,0 +1,19 @@
+#hero-section{
+    text-align:center;
+    max-height: 100svh;
+    overflow: hidden;
+    .wrapper{
+        padding-block-start: 5rem;
+    }
+    .btn{
+        margin-inline:auto;
+    }
+    .media{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        img{
+            width: 120%;
+        }
+    }
+}
