@@ -5,6 +5,7 @@ import Buttons from "./Ui/Buttons"
 import Wrapper from "./Ui/Wrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSquareFacebook, faYoutube, faSquareXTwitter,faPinterest,faInstagram } from '@fortawesome/free-brands-svg-icons'
+import "./Styling/Footer.scss"
 function Footer() {
   return (
     <>
